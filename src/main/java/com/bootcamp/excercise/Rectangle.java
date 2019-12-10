@@ -20,6 +20,9 @@ public class Rectangle {
 
     @Override
     public boolean equals(Object o) {
+        if (o == null || !(o instanceof Rectangle)) return false;
+        Rectangle object = (Rectangle) o;
+        if (!(this.length == object.length && this.breadth == object.breadth)) return false;
         return true;
     }
 }
